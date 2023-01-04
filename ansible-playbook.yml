@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
   - name: create S3 bucket
     s3_bucket:

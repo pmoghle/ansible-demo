@@ -10,7 +10,7 @@ pipeline{
 
        stage('create s3 bucket') {
           steps{
-        ansible-playbook create_s3.yml
+        ansible-playbook ansible-playbook.yml
      }
    }
  }

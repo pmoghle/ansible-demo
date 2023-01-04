@@ -1,1 +1,14 @@
-
+---
+- hosts: localhost
+  tasks:
+  - name: create S3 bucket
+    s3_bucket:
+      name: myansiblebucket
+      aws_access_key: AKIAQPEKF2BZAWQMHXIZ
+      aws_secret_key: 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
+      state: present
+      region: ap-south-1
+      versioning: no
+      tags:
+         name: myansiblebucket
+         type: example

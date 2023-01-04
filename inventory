@@ -1,2 +1,2 @@
 [inventory]
-https://s3.console.aws.amazon.com/s3/buckets?region=ap-south-1
+43.205.211.108 ansible_user ubuntu

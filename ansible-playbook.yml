@@ -13,3 +13,5 @@
       tags:
          name: poojanewbucket
          type: example
+         // Set public access permissions on the bucket
+        sh 'aws s3api put-public-access-block --bucket poojanewbucket --public-access-block-configuration BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false'

@@ -4,12 +4,12 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: newansiblebucket
+      name: latestansiblebucket
       aws_access_key: AKIAZOGSWYVYFIPZ7LVJ
       aws_secret_key: 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
       state: present
       region: ap-south-1
       versioning: no
       tags:
-         name: newansiblebucket
+         name: latestansiblebucket
          type: example

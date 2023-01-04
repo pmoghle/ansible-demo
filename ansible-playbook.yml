@@ -14,7 +14,7 @@
          name: poojanewbucket
          type: example
         - amazon.aws.s3_bucket:
-    name: poojanewbucket
+ -  name: poojanewbucket
     state: present
     public_access:
         block_public_acls: true

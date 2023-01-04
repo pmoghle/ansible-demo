@@ -1,5 +1,5 @@
 ---
-- hosts: https://s3.console.aws.amazon.com/s3/ap?region=ap-south-1
+- hosts: inventory
   tasks:
   - name: create S3 bucket
     s3_bucket:

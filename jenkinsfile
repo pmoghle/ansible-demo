@@ -1,1 +1,17 @@
+pipeline{
+    agent any
+    stages{
+       stage('scm checkout'){
+          steps{
+              git ' 
+      }
 
+  }
+
+       stage('create s3 bucket') {
+          steps{
+        ansible-playbook create_s3.yml
+     }
+   }
+ }
+}

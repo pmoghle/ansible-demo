@@ -1,6 +1,17 @@
 ---
 - hosts: localhost
   tasks:
-  - name: Create an S3 bucket
-    become: true
-    aws_s3: aws_access_key=AKIAZOGSWYVYFIPZ7LVJ* aws_secret_key=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* bucket=testbuck  mode=create permission=public-read region=ap-south-1
+  - name: create S3 bucket
+    s3_bucket:
+      name: myansiblebucket
+      aws_access_key: AKIAZOGSWYVYFIPZ7LVJ 
+      aws_secret_key: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 
+      policy: "{{ lookup( 'file','my_bucket_policy.json' )}}"
+      state: present
+      region: ap-south-1
+      permission=public-read
+      versioning: no
+      tags:
+         name: myansiblebucket
+         type: example
+         

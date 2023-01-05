@@ -6,7 +6,7 @@
       name: myansiblebucket
       aws_access_key: AKIAZOGSWYVYFIPZ7LVJ 
       aws_secret_key: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 
-    #  policy: "{{ lookup( 'file','my_bucket_policy.json' )}}"
+      policy: "{{ lookup( 'file','my_bucket_policy.json' )}}"
       state: present
       region: ap-south-1
       permission=public-read

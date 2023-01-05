@@ -14,4 +14,21 @@
       tags:
          name: myansiblebucket
          type: example
-         
+         my_bucket_policy.json
+{
+  "Id": "Policyxxx",
+  "Statement": [
+    {
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::myansiblebucket/*",
+      "Principal": {
+        "AWS": [
+          "*"
+        ]
+      }
+    }
+  ]
+}

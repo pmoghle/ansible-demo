@@ -15,7 +15,7 @@
          type: example
   - s3_bucket:
       name: myansiblelatestbucket
-      policy: "{{ lookup('file','policy.json') }}"
+      policy: "{{ lookup('file','my_bucket_policy.json') }}"
       requester_pays: yes
       versioning: yes
       tags:

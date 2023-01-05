@@ -1,15 +1,6 @@
 ---
 - hosts: localhost
-  connection: local 
   tasks:
-  - name: create S3 bucket
-    s3_bucket:
-      name: ansiblelatestbucket
-      aws_access_key: AKIAZOGSWYVYFIPZ7LVJ
-      aws_secret_key: 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
-      state: present
-      region: ap-south-1
-      versioning: no
-      tags:
-         name: ansiblelatestbucket
-         type: example
+  - name: Create an S3 bucket
+    become: true
+    aws_s3: aws_access_key=AKIAZOGSWYVYFIPZ7LVJ* aws_secret_key=AIXWDSSxRTSEeKKdf9tl7qCzrKQP8nf9Osf+xuX6* bucket=testbuck  mode=create permission=public-read region=ap-south-1

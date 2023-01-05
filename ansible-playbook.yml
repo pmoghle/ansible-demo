@@ -5,8 +5,8 @@
   - name: create S3 bucket
     s3_bucket:
       name: myansiblelatestbucket
-      aws_access_key: AKIAZOGSWYVYFIPZ7LVJ
-      aws_secret_key: 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
+      aws_access_key: AKIAZOGSWYVYDJ7ZRJKV
+      aws_secret_key: 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
       state: present
       region: ap-south-1
       versioning: no
@@ -14,7 +14,7 @@
          name: poojanewbucket
          type: example
   - s3_bucket:
-      name: mys3bucket
+      name: myansiblelatestbucket
       policy: "{{ lookup('file','policy.json') }}"
       requester_pays: yes
       versioning: yes

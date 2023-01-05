@@ -11,7 +11,7 @@
       region: ap-south-1
       versioning: no
       tags:
-         name: poojanewbucket
+         name: myansiblelatestbucket
          type: example
   - s3_bucket:
       name: myansiblelatestbucket

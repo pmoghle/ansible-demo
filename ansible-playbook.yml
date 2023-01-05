@@ -13,20 +13,11 @@
       tags:
          name: poojanewbucket
          type: example
-{
-  "Id": "648981955952",
-  "Statement": [
-    {
-      "Action": [
-        "s3:PutObject"
-      ],
-      "Effect": "Allow",
-      "Resource": "arn:aws:s3:::myansiblelatestbucket/*",
-      "Principal": {
-        "AWS": [
-          "*"
-        ]
-      }
-    }
-  ]
-}
+  - s3_bucket:
+      name: mys3bucket
+      policy: "{{ lookup('file','policy.json') }}"
+      requester_pays: yes
+      versioning: yes
+      tags:
+        example: tag1
+        another: tag2

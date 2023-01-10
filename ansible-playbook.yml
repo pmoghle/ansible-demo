@@ -4,12 +4,12 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: Txbucket
+      name: dellbucket
       aws_access_key: AKIAZOGSWYVYCOSQ6DCY
       aws_secret_key: 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
       state: present
       region: ap-south-1
       versioning: no
       tags:
-         name: Txbucket
+         name: dellbucket
          type: example

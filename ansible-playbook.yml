@@ -5,8 +5,8 @@
   - name: create S3 bucket
     s3_bucket:
       name: Txbucket
-      aws_access_key: AKIAZOGSWYVYDJ7ZRJKV
-      aws_secret_key: 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
+      aws_access_key: AKIAZOGSWYVYCOSQ6DCY
+      aws_secret_key: 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
       state: present
       region: ap-south-1
       versioning: no
